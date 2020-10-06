@@ -122,9 +122,9 @@ namespace Studyzy.IMEWLConverter
                 sb.Append(pair.Key);
                 sb.Append(" ");
                 sb.Append(string.Join(" ", pair.Value.ToArray()));
-                sb.Append("\r\n");
+                sb.Append("\n");
             }
-            return sb.ToString();
+            return sb.ToString().TrimEnd('\n');
         }
 
         private void MergeWLForm_Load(object sender, EventArgs e)
